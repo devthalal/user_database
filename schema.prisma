@@ -1,0 +1,97 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:thalal@123@localhost:5432/sample?schema=public"
+}
+
+enum PosterSource {
+  RAW
+  GITHUB
+}
+
+model User {
+  system_user_id                         Int       @id @default(autoincrement())
+  parent_system_user_id                  Int?
+  first_name                             String
+  salutation                             String?
+  middle_name                            String?
+  last_name                              String?
+  email                                  String
+  personal_e_mail_address                String?
+  full_name                              String?
+  nick_name                              String?
+  title                                  String?
+  internal_e_mail_address                String?
+  job_title                              String?
+  mobile_alert_e_mail                    String?
+  preferred_email_code                   Int? // int32
+  preferred_email_code_display           String?
+  home_phone                             String?
+  mobile_phone                           String?
+  preferred_phone_code                   Int?
+  preferred_phone_code_display           String?
+  preferred_address_code                 String?
+  preferred_address_code_display         String?
+  photo_url                              String?
+  domain_name                            String?
+  passport_lo                            Int? // int32 //desc: for internal use only // max: 1000000000
+  created_on                             DateTime?
+  passport_hi                            Int? // int32 //desc: for internal use only // max: 1000000000
+  disabled_reason                        String?
+  modified_on                            DateTime?
+  created_by                             String?
+  employee_id                            String? // Is it needed?
+  modified_by                            String?
+  is_disabled                            Boolean?
+  government_id                          String?
+  version_number                         Int?
+  skills                                 String?
+  display_in_service_views               Boolean?
+  calendar_id                            String? // guid
+  setup_user                             Boolean?
+  windows_live_i_d                       String?
+  incoming_email_delivery_method         Int?
+  incoming_email_delivery_method_display String?
+  outgoing_email_delivery_method         Int?
+  outgoing_email_delivery_method_display String?
+  import_sequence_number                 Int?
+  access_mode                            Int?
+  access_mode_display                    String?
+  invite_status_code                     Int?
+  invite_status_code_display             String?
+  overridden_created_on                  DateTime?
+  utc_conversion_time_zone_code          Int?
+  time_zone_rule_version_number          Int?
+  yomi_full_name                         String?
+  yomi_last_name                         String?
+  yomi_middle_name                       String?
+  yomi_first_name                        String?
+  is_integration_user                    Boolean?
+  default_filters_populated              Boolean?
+  created_on_behalf_by                   String? // guid
+  queue_id                               String? // guid
+  modified_on_behalf_by                  String? // guid
+  email_router_access_approval           Int?
+  email_router_access_approval_display   String?
+  transaction_currency_id                String? // guid
+  exchange_rate                          Decimal?
+  cal_type                               Int?
+  cal_type_display                       String?
+  is_licensed                            Boolean?
+  is_sync_with_directory                 Boolean?
+  user_license_type                      Int?
+  entity_image_id                        String? // guid
+  process_id                             String? // guid
+  stage_id                               String? // guid
+  position_id                            String? // guid
+  traversed_path                         String?
+  mobile_offline_profile_id              String? // guid
+  application_id                         String? // guid
+  application_id_uri                     String? 
+  identity_id                            String? // guid
+  territory_id                           String? // guid
+  site_id                                String? // guid
+}

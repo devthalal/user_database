@@ -1,0 +1,17 @@
+{
+  "name": "user_database",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^4.0.0",
+    "node-blox-sdk": "file:../../../../../node-blox-sdk"
+  },
+  "devDependencies": {
+    "prisma": "^4.0.0"
+  }
+}
